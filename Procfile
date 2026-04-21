@@ -1,1 +1,1 @@
-web: gunicorn opendoor_dashboard_v6:server --workers 1 --threads 4 --timeout 60
+web: gunicorn opendoor_dashboard_LD:server --workers 1 --threads 4 --timeout 60
