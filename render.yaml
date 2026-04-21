@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: opendoor-dashboard
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn opendoor_dashboard_v6:server --workers 1 --threads 4 --timeout 60
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
